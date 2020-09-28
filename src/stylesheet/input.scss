@@ -25,8 +25,7 @@ html {
 }
 
 body {
-	background: url("/src/images/bg-pattern-top-desktop.svg") top left no-repeat,
-		url("/src/images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+	background: url("/src/images/bg-pattern-top-desktop.svg") top left no-repeat, url("/src/images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
 	margin: 0;
    padding: 100px 120px 50px 120px;
 }
@@ -168,6 +167,7 @@ h1 {
 
 @media screen and (max-width: 500px) {
    body {
+      background: url("/src/images/bg-pattern-top-mobile.svg") top left no-repeat, url("/src/images/bg-pattern-bottom-mobile.svg") bottom right no-repeat;
       padding: 70px 30px 30px 30px;
    }
 
