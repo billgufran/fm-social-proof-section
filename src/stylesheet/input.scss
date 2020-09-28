@@ -21,7 +21,6 @@ $secondary-light-magenta: hsl(300, 24%, 96%);
 }
 
 html {
-   min-height: 100%;
 	font: 14px "Spartan";
 }
 
@@ -29,24 +28,22 @@ body {
 	background: url("/src/images/bg-pattern-top-desktop.svg") top left no-repeat,
 		url("/src/images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
 	margin: 0;
-	padding: 100px 120px;
-	height: 100%;
+   padding: 100px 120px 50px 120px;
 }
 
-.flex-row {
+.flexbox {
    display: flex;
-	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
 header {
-   margin-bottom: 75px;
+   margin-bottom: 140px;
 }
 
 main {
-   margin-bottom: 30px;
-   height: 300px;
+   margin-bottom: 35px;
+   flex-wrap: wrap;
 }
 
 #header-left {
@@ -84,7 +81,8 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	width: 500px;
+	width: 85%;
+   min-width: 300px;
 	height: 65px;
 	border-radius: 7px;
    padding: 0 45px;
@@ -112,10 +110,11 @@ h1 {
 }
 
 .customer-card {
-   width: 375px;
+   width: 32%;
    padding: 45px 30px;
    background-color: $primary-magenta;
    border-radius: 8px;
+   height: 100%;
 
    img {
       width: 45px;
@@ -123,13 +122,10 @@ h1 {
    }
 
    &:nth-child(1) {
-      align-self: flex-start;
+      transform: translate(0, -20%)
    }
    &:nth-child(2) {
-      align-self: center;
-   }
-   &:nth-child(3) {
-      align-self: flex-end;
+      transform: translate(0, -10%);
    }
 }
 
@@ -154,4 +150,37 @@ h1 {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+   .flexbox {
+      flex-flow: column wrap;
+   }
+
+   #header-left, #header-right, .customer-card, .rating-card {
+      width: 100%;
+   }
+
+   #header-left {
+      margin-bottom: 50px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   body {
+      padding: 70px 30px 30px 30px;
+   }
+
+   header {
+      text-align: center;
+   }
+
+   .rating-card {
+      flex-direction: column;
+      justify-content: space-evenly;
+   }
+
+   .rating-stars {
+      margin: 0;
+   }
 }
