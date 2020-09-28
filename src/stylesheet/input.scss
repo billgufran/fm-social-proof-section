@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Spartan:100,200,300,regular,500,600,700,800,900);
+
+$primary-magenta: hsl(300, 43%, 22%);
+$primary-pink: hsl(333, 80%, 67%);
+
+$secondary-dark-magenta: hsl(303, 10%, 53%);
+$secondary-light-magenta: hsl(300, 24%, 96%);
+
+@mixin spaced-text($color) {
+	font: 400 1rem / 2 "Spartan";
+	color: $color;
+}
+
+@mixin bold-text($color) {
+   font: bold 1rem / 1 "Spartan";
+	color: $color;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+   min-height: 100%;
+	font: 14px "Spartan";
+}
+
+body {
+	background: url("/src/images/bg-pattern-top-desktop.svg") top left no-repeat,
+		url("/src/images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+	margin: 0;
+	padding: 100px 120px;
+	height: 100%;
+}
+
+.flex-row {
+   display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+   margin-bottom: 75px;
+}
+
+main {
+   margin-bottom: 30px;
+   height: 300px;
+}
+
+#header-left {
+	width: 500px;
+}
+
+#header-right {
+	width: 600px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+   height: 230px;
+}
+
+h1 {
+	font: 700 3.5rem/1 "Spartan";
+   color: $primary-magenta;
+   margin: 1rem 0 ;
+}
+
+.light-text {
+	@include spaced-text($secondary-light-magenta);
+}
+
+.dark-text {
+	@include spaced-text($secondary-dark-magenta);
+}
+
+.avatar {
+	border-radius: 100%;
+}
+
+.rating-card {
+	background-color: $secondary-light-magenta;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 500px;
+	height: 65px;
+	border-radius: 7px;
+   padding: 0 45px;
+
+   &:nth-child(1) {
+      align-self: flex-start;
+   }
+   &:nth-child(2) {
+      align-self: center;
+   }
+   &:nth-child(3) {
+      align-self: flex-end;
+   }
+}
+
+.rating-text {
+	@include bold-text($primary-magenta);
+}
+
+.rating-stars {
+	margin-right: 35px;
+	width: 110px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.customer-card {
+   width: 375px;
+   padding: 45px 30px;
+   background-color: $primary-magenta;
+   border-radius: 8px;
+
+   img {
+      width: 45px;
+      margin-right: 2rem;
+   }
+
+   &:nth-child(1) {
+      align-self: flex-start;
+   }
+   &:nth-child(2) {
+      align-self: center;
+   }
+   &:nth-child(3) {
+      align-self: flex-end;
+   }
+}
+
+.customer-card-head {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1.5rem;
+}
+
+.customer-name {
+   @include bold-text($secondary-light-magenta);
+   margin-bottom: 0.5rem;
+}
+
+.customer-type {
+   color: $primary-pink;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

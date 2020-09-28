@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Spartan:100,200,300,regular,500,600,700,800,900);
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font: 14px "Spartan";
+}
+
+body {
+  background: url("/src/images/bg-pattern-top-desktop.svg") top left no-repeat, url("/src/images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+  margin: 0;
+  padding: 100px 120px;
+  height: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-bottom: 75px;
+}
+
+main {
+  margin-bottom: 30px;
+  height: 300px;
+}
+
+#header-left {
+  width: 500px;
+}
+
+#header-right {
+  width: 600px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 230px;
+}
+
+h1 {
+  font: 700 3.5rem/1 "Spartan";
+  color: #502050;
+  margin: 1rem 0;
+}
+
+.light-text {
+  font: 400 1rem/2 "Spartan";
+  color: #f7f2f7;
+}
+
+.dark-text {
+  font: 400 1rem/2 "Spartan";
+  color: #937b92;
+}
+
+.avatar {
+  border-radius: 100%;
+}
+
+.rating-card {
+  background-color: #f7f2f7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  height: 65px;
+  border-radius: 7px;
+  padding: 0 45px;
+}
+.rating-card:nth-child(1) {
+  align-self: flex-start;
+}
+.rating-card:nth-child(2) {
+  align-self: center;
+}
+.rating-card:nth-child(3) {
+  align-self: flex-end;
+}
+
+.rating-text {
+  font: bold 1rem/1 "Spartan";
+  color: #502050;
+}
+
+.rating-stars {
+  margin-right: 35px;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-card {
+  width: 375px;
+  padding: 45px 30px;
+  background-color: #502050;
+  border-radius: 8px;
+}
+.customer-card img {
+  width: 45px;
+  margin-right: 2rem;
+}
+.customer-card:nth-child(1) {
+  align-self: flex-start;
+}
+.customer-card:nth-child(2) {
+  align-self: center;
+}
+.customer-card:nth-child(3) {
+  align-self: flex-end;
+}
+
+.customer-card-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.customer-name {
+  font: bold 1rem/1 "Spartan";
+  color: #f7f2f7;
+  margin-bottom: 0.5rem;
+}
+
+.customer-type {
+  color: #ee68a4;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
